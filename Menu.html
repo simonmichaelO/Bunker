@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BUNKER</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/cover-and-logo/favicon.ico" />
+    <!-- Boostrap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <style type="text/css">
+      .dropdown-menu li {
+        position: relative;
+      }
+
+      .dropdown-menu .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+      }
+
+      .dropdown-menu > li:hover > .submenu {
+        display: block;
+      }
+
+      .dropdown-menu .submenu-left {
+        right: 100%;
+        left: auto;
+      }
+
+      @media only screen and (max-width: 800px) {
+        .dropdown-menu .submenu {
+          left: 25%;
+          top: 0px;
+        }
+        .dropdown-menu .multi-menu {
+          left: 95%;
+        }
+        .dropdown-menu .submenu-left {
+          left: 50%;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".dropdown-menu").forEach(function (element) {
+          element.addEventListener("click", function (e) {
+            e.stopPropagation();
+          });
+        });
+
+        if (window.innerWidth < 992) {
+          document
+            .querySelectorAll(".dropdown-menu a")
+            .forEach(function (element) {
+              element.addEventListener("click", function (e) {
+                let nextEl = this.nextElementSibling;
+                if (nextEl && nextEl.classList.contains("submenu")) {
+                  e.preventDefault();
+                  if (nextEl.style.display == "block") {
+                    nextEl.style.display = "none";
+                  } else {
+                    nextEl.style.display = "block";
+                  }
+                }
+              });
+            });
+        }
+      });
+    </script>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/images/cover-and-logo/Bunker-logo.jpg
+                "
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="./Events.html">Events</a>
+            </li>
+
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  href=""
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Menu</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0);" class="dropdown-item dropdown-toggle">Edibles </a><ul class="dropdown-menu submenu">
+                      <li><a href="#mains" class="dropdown-item">Mains</a>
+                      </li>
+                      <li>
+                        <a href="#salad" class="dropdown-item">Salad </a>
+                      </li>
+                      <li><a href="#breakfast" class="dropdown-item">Breakfast</a>
+                      </li>
+                      <li><a href="#pasta" class="dropdown-item">Pasta</a>
+                      </li>
+                      <li><a href="#peppered-treat" class="dropdown-item">Peppered Treat</a>
+                      </li>
+                      <li><a href="#seafood" class="dropdown-item">Seafood</a>
+                      </li>
+                      <li><a href="#grill-land" class="dropdown-item">Grill Land</a>
+                      </li>
+                      <li><a href="#wraps" class="dropdown-item">Wraps</a>
+                      </li>
+                      <li><a href="#burger" class="dropdown-item">Burger</a>
+                      </li>
+                      <li><a href="#sides" class="dropdown-item">Sides</a>
+                      </li>
+                    </ul></li>
+                  <li>
+                    <a href="javascript:void(0);" class="dropdown-item dropdown-toggle">Liquors </a>
+                    <ul class="dropdown-menu submenu">
+                      <li><a href="#alcholic-cocktails" class="dropdown-item">Alcholic Cocktails</a>
+                      </li>
+                      <li><a href="#non-alcholic-cocktails" class="dropdown-item">Non-Alcholic Cocktails</a>
+                      </li>
+                      <li><a href="#milkshakes" class="dropdown-item">Milkshake</a>
+                      </li>
+                      <li><a href="#smoothies" class="dropdown-item">Smoothies</a>
+                      </li>
+                      <li><a href="#wines" class="dropdown-item">Wines</a>
+                      </li>
+                      <li><a href="#cognac" class="dropdown-item">Cognac</a>
+                      </li>
+                      <li>
+                        <a href="#champaign" class="dropdown-item">Champagne </a>
+                      </li>
+                      <li><a href="#shots" class="dropdown-item">shots</a>
+                      </li>
+                      <li><a href="#taquilla" class="dropdown-item">Taquilla</a>
+                      </li>
+                      <li><a href="#whiskey" class="dropdown-item">Whiskey</a>
+                      </li>
+                      <li><a href="#vodka" class="dropdown-item">Vodka</a>
+                      </li>
+                      <li><a href="#chasers" class="dropdown-item">Chasers</a>
+                      </li>
+                      <li><a href="#softdrinks" class="dropdown-item">Soft Drinks</a>
+                      </li>
+                    </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#reservation">Reservation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Slider -->
+
+    <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item text-center bg-cover vh-100 active slide-1">
+          <div
+            class="container h-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h6 class="text-white">WELCOME TO BUNKER</h6>
+                <h1 class="display-1 my-3 fw-bold text-white">
+                  Tasty and Delicious Foods
+                </h1>
+                <a href="#reservation" class="btn btn-brand">Reservation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item text-center bg-cover vh-100 slide-2">
+          <div
+            class="container h-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h6 class="text-white">WELCOME TO BUNKER</h6>
+                <h1 class="display-1 my-3 fw-bold text-white">
+                  Home Of Comfort
+                </h1>
+                <a href="#reservation" class="btn btn-brand">Reservation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item text-center bg-cover vh-100 slide-4">
+          <div
+            class="container h-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h6 class="text-white">WELCOME TO BUNKER</h6>
+                <h1 class="display-1 my-3 fw-bold text-white">
+                  Chilled and Satisfying Drinks
+                </h1>
+                <a href="#reservation" class="btn btn-brand">Reservation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="carousel-item text-center bg-cover vh-100 active slide-3">
+          <div
+            class="container h-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h6 class="text-white">WELCOME TO BUNKER</h6>
+                <h1 class="display-1 my-3 fw-bold text-white">
+                  Our Customers, Our priority 
+                </h1>
+                <a href="#reservation" class="btn btn-brand">Reservation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroSlider"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroSlider"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Menu -->
+     <section id="menu" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 intro-text">
+                    <h1>Explore Our Menu</h1>
+                    <p>This is the list of our edibles and liquors</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+                        type="button" role="tab" aria-controls="pills-all" aria-selected="true">EDIBLES</button>
+                </li>
+
+            </ul>
+              <!-- edibles -->
+              <!-- mains -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="mains">
+                        <button type="button" class="btn btn-warning">Mains</button>
+  
+                    </div>
+
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Beef-stroganoff.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Beef Stroganoff</a></h5>
+                           <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎6,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Chicken-casserole.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>                                            <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chicken Casserole</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎8,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Asian-fried-rice.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Asian Fried Rice</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎6,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Jambalaya-rice-and-plantain.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Jambalaya Rice</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/penapple-rice.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Pineapple Rice</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎7,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Chicken-Cardon-Blue.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chicken Gardon Blue</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎7,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Beef-kabeb.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Beef Kabeeb</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎7,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Chicken-Kabeb.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chicken Kabeebs</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎6,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Baracuda-Fish-kabeb.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Baracuda Fish Kabeebs</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎8,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Hot-spicy-Chicken-wings.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Hot Spicy Chicken Wings</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎7,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            <br>
+              <!-- salad -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="salad">
+                        <button type="button" class="btn btn-warning">Salad</button>
+  
+                    </div>
+
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Chef-Salad.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chef Salad</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Rusian-Salad.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Russian Salad</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- breakfast -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="breakfast">
+                        <button type="button" class="btn btn-warning">Breakfast</button>
+  
+                    </div>
+
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/English-Breakfast.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">English Breakfast</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎10,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/American-Breakfast.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">American Breakfast</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎10,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Waffles.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Waffles</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Pancakes.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Pancakes</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/oats-and-choice-of-egg.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Oats and Choice of Egg</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- pasta -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="pasta">
+                        <button type="button" class="btn btn-warning">Pasta</button>
+  
+                    </div>
+
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Paster-alfredo.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Paster Alfredo</a>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎6,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/carbonara-pasta.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Carbonara Pasta</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎6,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/pasta-arabiata.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Pasta Arabiata</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Creamy-penny-pasta-and-meat-ball.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Creamy Penny Pasta</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- peppered treat -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="peppered-treat">
+                        <button type="button" class="btn btn-warning">Peppered Treat</button>
+  
+                    </div>
+
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/chicken and chips.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chicken and Chips</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Peppered-Chicken.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Peppered Chicken</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Peppered-Goat-meat.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Peppered Goatmeat</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Peppered-snail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Peppered Snail</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Peppered-Turkey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Peppered Turkey</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- seafood -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="seafood">
+                        <button type="button" class="btn btn-warning">Seafood</button>
+  
+                    </div>
+
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Seafood-squiwer.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Seafood Squiwer</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎12,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Spicy-seafood-boil.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Spicy Seafood Boil</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎10,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Seafood-okro.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Seafood Okro</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎8,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Seafood-Rice.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Seafood Rice</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎7,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- grilled land -->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="grill-land">
+                        <button type="button" class="btn btn-warning">Grill Land</button>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Grilled-Croacker-fish.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Grilled Croacker Fish</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎10,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Grilled-catfish.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Grilled Catfish</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎8,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- wraps -->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="wraps">
+                        <button type="button" class="btn btn-warning">Wraps</button>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/chicken sharwam.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chicken Sharwama</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Beef-sharwama.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Beef Sharwama</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Special-sharwama.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Special Sharwama</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- burger -->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="burger">
+                        <button type="button" class="btn btn-warning">Burger</button>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Chicken-Burger.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chicken Burger</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Beef-Burger.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Beef Burger</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Edibles/Double me up.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Double Me Up Burger</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎6,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+
+          <!-- liquors -->
+            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+                        type="button" role="tab" aria-controls="pills-all" aria-selected="true">LIQUORS</button>
+                </li>
+            </ul>
+            
+            
+            <!-- Alcoholic cocktails -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="alcholic-cocktails">
+                        <button type="button" class="btn btn-warning">Alcholic Cocktails</button>
+  
+                    </div>
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Long-island-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Long Island</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/sex-on-the-beach.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Sex On ThE Beach</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/blue-island-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Blue Island</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Flamingo-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Flamingo</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/mojito-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Mojito</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Sex-with-jenny.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Sex with Jenny</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/kamikaze-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Kamikaze</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Electric-smurf.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Electric Smurf</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Pina-colada.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Pina Colada</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/lava-flow-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Lava Flow</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/margarita-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Margarita</a></h5>
+                                    <p class="small">
+                                      <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎5,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/Blow-job-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Blow Job</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/El-presidente-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">El Presidente</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+             <!-- Non Alcoholic cocktails -->
+
+            <div class="tab-content" id="pills-tabContent">
+
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="non-alcholic-cocktails">
+                        <button type="button" class="btn btn-warning">Non-Alcholic Cocktails</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Virgin-colada-Cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Virgin Colada</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Father-Abraham.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Father Abraham</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Virgin-mojito.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Virgin Mojito</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎4,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Chapman-cocktail.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chapman</a></h5><h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+              <!-- Milkshakes -->
+            <div class="tab-content" id="pills-tabContent">
+
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="milkshakes">
+                        <button type="button" class="btn btn-warning">Milkshakes</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Banana-Milkshake.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Bahner Jiggles</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Chocolate-peanut-butter.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Goober Brownie</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/apple-Milkshake.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Breaburns Shakes</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/oreo-milkshake.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);"></a>Sandwich Cookie</h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,000</a></h5>
+                                </div>
+                            </div>
+                          </div>
+                                                  <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/strawberry-milkshake.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);"></a>Fragaria's Shakes</h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,000</a></h5>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    
+                    
+                    
+               <!--Smoothies -->
+
+            <div class="tab-content" id="pills-tabContent">
+
+
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="smoothies">
+                        <button type="button" class="btn btn-warning">Smoothies</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/pineapple-smoothie.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Ananas Dessert</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/classic-fruit-squash-smoothie.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Classic Fruit</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Breaburn-fragaria-mix-smoothie.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Breaburn fragaria's Mix</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+            <!-- Wines-->
+
+            <div class="tab-content" id="pills-tabContent">
+
+
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="wines">
+                        <button type="button" class="btn btn-warning">Wines</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Carlo-Rossi-wine.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Carlo Rossi</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎15,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Four-cousins-wine.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Four Cousins</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎15,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Robertson-wine.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Robertson</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎15,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/eseudo-rojo-wine.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Eseudo Rojo</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎17,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Gran-castilo.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Gran Castilo</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎10,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Sweet-lips-wine.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Sweet Lips</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎15,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div
+                    
+              <!-- Cognac -->
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="cognac">
+                        <button type="button" class="btn btn-warning">Cognac</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Hennessy-xo-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Hennessy XO</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                        <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎250,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Hennessy-vsop-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Hennessy VSOP</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎80,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Hennessy-vs-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Hennessy VS</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎45,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Remy-Martin-xo-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Remy Martin XO</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎175,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Remy-martin-1738-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Remy Martin 1738</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎85,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Remy-Martin-Vsop-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Remy Martin VSOP</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎60,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Martel-Blue-swift-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Martel Blue Swift</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎70,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Mertel-vs-cognac.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Martel VS</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎50,000</a></h5>
+                                </div>
+                            </div>                
+                         </div>
+                      </div>
+
+                            
+                            
+          <!-- Champaign -->
+              <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="champaign">
+                        <button type="button" class="btn btn-warning">Champaign</button>
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Don-perignon-chanpaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Don Perignon</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎250,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Moet-Rose-imparial.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Moet Rose Imperial</a></h5>
+                                 <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎80,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Moet-Necter-imparial-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Moet Necter Imperial</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎75,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Moet-necter-brut-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Moet Nectar Brut</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎80,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/veuve-cliequot-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Veuve Cliequot </a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎60,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Bottege-gold-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Bottege Gold</a></h5>
+                                </div><h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎45,000</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Bottege-pink-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Bottege Pink</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎40,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Martini-rose-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Martini Rose</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎50,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Blue-nun-24k-gold-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Blue Nun 24k</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎50,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/Blue-nun-rose-champaign.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Blue Nun Rose</a></h5>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎50,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+  
+  
+  
+          <!-- shots -->
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="shots">
+                        <button type="button" class="btn btn-warning">Shots</button>
+                    </div>
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/taquilla-shots.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.5)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Taquilla Shots s</a></h5>
+                                    <p class="small">Comes with salt and lime</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,000 per shot</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/vodka-shots.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.5)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Vodka Shots</a></h5>
+                                    <p class="small">Comes with salt and lime</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,000 per shot</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Rum-shots.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Rum Shots</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,000 per shot</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/cognac-shots.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.5)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);"></a>Cognac Shots</h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎3,000 </a></h5>
+                                </div>
+                            </div>
+                          </div>
+                                                  <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/Whiskey-shots.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.5)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);"></a>Whiskey Shots</h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,000 </a></h5>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+               <!--Taquilla -->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="taquilla">
+                        <button type="button" class="btn btn-warning">Taquilla</button>
+                    </div>
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/olmeca-taquilla.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Olmeca Taquilla</a></h5>
+                           
+                                <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎20,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Black-bullet.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Black Bullet</a></h5>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+          <!-- Whiskey-->
+
+              <div class="tab-content" id="pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+                    <div class="btn-group-vertical" id="whiskey">
+                        <button type="button" class="btn btn-warning">Whiskey</button>
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Jameson-green-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Jameson Green</a></h5>
+                                    <p class="small">Can be served with any choice of chasers </p>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎35,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Jameson-black-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Jameson Black</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎45,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Red-label-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Red Label</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎20,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Glenfiddich-12-yrs-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Glenfiddich 12 years</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎45,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Glenfiddich-15-yrs-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Glenfiddich 15 years</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎75,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Glenfiddich-18-yrs-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Glenfiddich 18 years</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎100,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/glenfiddich-21-yrs-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Glenfiddich 21 years</a></h5>
+                                    <p class="small">Can be seved with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎270,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/singleton-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Singleton</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎35,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/jack-daniels-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Jack Daniels</a></h5>
+                                    <p class="small">Can be served with any choice of Chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎25,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+
+                            <div class="menu-item bg-white shadow-on-hover">
+
+                                <img src="./assets/images/Liquors/Glenmorangle-18-yrs-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Glenmorangle 18 years</a></h5>
+                                    <p class="small">Can ne served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎120,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Glenmorangle-signet-whiskey1.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Glenmorangle Signet</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎200,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/iris-cream-bailey-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Irish Cream (Baileys)</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎20,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Proclamation-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Proclamation</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                 <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎30,000</a></h5>                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Blue-label-whiskeh.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Blue Label</a></h5>
+                                    <p class="small">Can be served with any choice of chasers</p>
+                                 <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎180,000</a></h5>                     </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/The-observatory-whiskey.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">The Observatory</a></h5>
+                                    <p class="small">Can be served with any choice of Chasers</p>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎50,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        <!-- vodka-->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="vodka">
+                        <button type="button" class="btn btn-warning">vodka</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Ciroc-vodka.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Ciroc Vodka</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎35,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Fly-vodka.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Fly Vodka</a></h5>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎20,000</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+            <!-- chasers-->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="chasers">
+                        <button type="button" class="btn btn-warning">Chasers</button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Blue-bullet.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Blue Bullet</a></h5>
+                                   
+                                  <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎1,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Climax.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Climax</a></h5>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎1,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Coke.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Coke</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/fanta.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Fanta</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/farouz.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Farouz</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Red-bull.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Red Bull</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Sprite.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Sprite</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎500</a></h5>
+                                </div>
+                            </div>
+                        </div>  
+           <!--soft drink amd juice-->
+                        <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                    tabindex="0">
+
+                    <div class="btn-group-vertical" id="softdrinks">
+                        <button type="button" class="btn btn-warning">Soft Drink and Juice </button>
+  
+                    </div>
+
+                    <div class="row gy-4 mt-1">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/chi-exotic.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chi Exotic</a></h5>
+                                <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Chivita.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Chivita</a></h5>
+                                    <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Hollandia-yourghurt.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Hollandia Yourghurt</a></h5>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎2,500</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="menu-item bg-white shadow-on-hover">
+                                <img src="./assets/images/Liquors/Aquafina-water.jpg" alt="">
+                                <div class="menu-item-content p-4">
+                                    <div>
+                                        <span>Rated(5.4)</span>
+                                        <span class="stars">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-fill"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mt-1 mb-2"><a href="javascript:void(0);">Table Water</a></h5>
+                                   <h5 class="mt-1 mb-2 text-center fw-bold"><a href="javascript:void(0);">Price=₦‎300</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </section>
+                  
+    <!-- Reservation -->
+    <section id="reservation">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 intro-text">
+            <h1>Book Your Table</h1>
+            <p>
+              Book a table,Make an order or lay a complain.
+            </p>
+          </div>
+        </div>
+        <form action="#" class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="row g-3">
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Full name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control" placeholder="Phone Number" />
+              </div>
+              <div class="form-group col-md-12">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="8"
+                  class="form-control"
+                  placeholder="Meesage"
+                ></textarea>
+              </div>
+              <div class="form-group text-center col-md-12">
+                <a href="http://wa.me/2349033328061" class="btn btn-brand">Send Message</a>
+                <p> By clicking <em>Send Messages </em>  you will be redirected to the creators WhatsApp</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+                  
+   <!-- footer -->
+    <footer class="bg-cover">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-lg-4">
+              <img src="./assets/images/cover-and-logo/Bunker-logo.jpg" class="mb-4" alt="" />
+               <div>
+                <ul class="text-white">
+            <li class="nav-item">
+
+              <a class="nav-link fw-bold" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="./Events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="./Menu.html">Menu</a>
+            </li>
+                </ul>
+               </div>
+              <div class="social-links">
+                <a href="https://instagram.com/breezzzbar?igshid=MzRlODBiNWFlZA=="><i class="ri-facebook-circle-fill"></i></a>
+                <a href="https://instagram.com/bunkerbybreezzz?igshid=MzRlODBiNWFlZA=="><i class="ri-instagram-fill"></i></a>
+                <a href="https://instagram.com/bunkerbybreezzz?igshid=MzRlODBiNWFlZA=="><i class="ri-youtube-fill"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-3 ms-auto">
+              <h6 class="text-white mb-4">CONTACT</h6>
+              <p class="mb-1">Phone: +234 9033328061</p>
+              <p class="mb-1">Email: Simonmichaelmain.com</p>
+              <p class="mb-0">
+                Address: 6 Ebenator Street, Enugu, Nigeria, 400102
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h6 class="text-white mb-4">OPENING HOURS</h6>
+              <p class="mb-1">Monday-Friday : 04:00pm - 01:00am</p>
+              <p>Saturday-Sunday : 04:00pm - 03:00am</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row gy-3 justify-content-between">
+            <div class="col-auto">
+              <p class="mb-0">Copyrights all rights reserved</p>
+            </div>
+            <div class="col-auto">
+              <p class="mb-0">
+                Designed By
+                <a href="https://wa.me/message/YQ23X5U5MPELP1">Simon Michael</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle Js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
